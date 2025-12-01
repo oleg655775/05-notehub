@@ -38,7 +38,7 @@ export default function NoteForm({ closeModal }: NoteFormProps) {
     mutationFn: (note) => createNote(note),
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['notes'] });
-      toast.success('Note edited successfully!');
+      toast.success('Note created successfully!');
       closeModal();
     },
     onError: (error) => {
